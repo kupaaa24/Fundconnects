@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      /* Basic Reset */
+      body,
+      h1,
+      table {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4; /* Light background color */
+        color: #333; /* Dark text color for contrast */
+        padding: 20px; /* Add some padding */
+      }
+
+      /* Header Styles */
+      header {
+        text-align: center;
+        margin-bottom: 20px; /* Space below the header */
+      }
+
+      h1 {
+        font-size: 24px; /* Larger font size for the header */
+        color: #007bff; /* Header color */
+      }
+
+      /* Table Styles */
+      table {
+        width: 100%;
+        border-collapse: collapse; /* Remove space between cells */
+        margin-top: 20px; /* Space above the table */
+      }
+
+      th,
+      td {
+        padding: 12px; /* Add some padding for table cells */
+        text-align: left; /* Align text to the left */
+        border-bottom: 1px solid #ddd; /* Add a bottom border to cells */
+      }
+
+      th {
+        background-color: #007bff; /* Header background color */
+        color: white; /* Header text color */
+        font-weight: bold; /* Bold text for headers */
+      }
+
+      tr:hover {
+        background-color: #f1f1f1; /* Highlight row on hover */
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 600px) {
+        th,
+        td {
+          padding: 8px; /* Smaller padding for smaller screens */
+        }
+
+        h1 {
+          font-size: 20px; /* Smaller header size for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Transaction History</h1>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Donor Name</th>
+            <th>Donation Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+          <!-- Transaction records will go here -->
+        </tbody>
+      </table>
+    </main>
+    <script>
+      // Sample transaction data
+      const transactions = [
+        { name: "Alice", amount: "$100", date: "2024-10-01" },
+        { name: "Bob", amount: "$50", date: "2024-10-02" },
+        { name: "Charlie", amount: "$75", date: "2024-10-03" },
+      ];
+
+      const transactionTableBody = document.getElementById(
+        "transactionTableBody"
+      );
+
+      transactions.forEach((transaction) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+                <td>${transaction.name}</td>
+                <td>${transaction.amount}</td>
+                <td>${transaction.date}</td>
+            `;
+        transactionTableBody.appendChild(row);
+      });
+    </script>
+  </body>
+</html>

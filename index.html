@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FundConnect</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      /* Add styles for the scroll-to-top button */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none; /* Hidden by default */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .scroll-to-top:hover {
+        background-color: #0056b3;
+      }
+
+      /* Center the welcome message */
+      .welcome-message {
+        text-align: center;
+        margin-top: 100px; /* Adjust as needed */
+        font-size: 36px; /* Larger font size */
+        font-weight: bold;
+        color: #007bff; /* Change color for emphasis */
+      }
+
+      /* Tagline styles */
+      .tagline {
+        font-size: 20px; /* Size of the tagline */
+        color: #555; /* Color for tagline */
+        margin-top: 10px; /* Space between message and tagline */
+      }
+
+      /* Donation section */
+      .donation-section {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+      }
+
+      /* Buttons for copy link and share on WhatsApp */
+      .btn-group {
+        margin-top: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .copy-btn {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .whatsapp-btn {
+        background-color: #25d366;
+        color: white;
+      }
+
+      .copy-btn:hover,
+      .whatsapp-btn:hover {
+        opacity: 0.8;
+      }
+
+      /* Referral code */
+      .referral-code {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- for header part -->
+    <header>
+      <div class="logosec">
+        <div class="logo">FundConnect</div>
+        <img
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+          class="icn menuicn"
+          id="menuicn"
+          alt="menu-icon"
+        />
+      </div>
+
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <div class="searchbtn">
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+            class="icn srchicn"
+            alt="search-icon"
+          />
+        </div>
+      </div>
+
+      <div class="message">
+        <div class="circle"></div>
+        <img
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
+          class="icn"
+          alt=""
+        />
+        <div class="dp">
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+            class="dpicn"
+            alt="dp"
+          />
+        </div>
+      </div>
+
+      <!-- Add login button -->
+      <div class="login-btn">
+        <button id="loginButton">Login</button>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="navcontainer">
+        <nav class="nav">
+          <div class="nav-upper-options">
+            <div class="nav-option option1">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                class="nav-img"
+                alt="dashboard"
+              />
+              <h3>Dashboard</h3>
+            </div>
+
+            <div class="option2 nav-option">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                class="nav-img"
+                alt="articles"
+              />
+              <h3>Transactions</h3>
+            </div>
+
+            <div class="nav-option option3">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                class="nav-img"
+                alt="report"
+              />
+              <h3>FAQ</h3>
+            </div>
+
+            <div class="nav-option option4">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                class="nav-img"
+                alt="institution"
+              />
+              <h3>Learning</h3>
+            </div>
+
+            <div class="nav-option option5">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                class="nav-img"
+                alt="blog"
+              />
+              <h3>Modules</h3>
+            </div>
+
+            <div class="nav-option option6">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                class="nav-img"
+                alt="settings"
+              />
+              <h3>Settings</h3>
+            </div>
+
+            <div class="nav-option logout">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+                class="nav-img"
+                alt="logout"
+              />
+              <h3>Logout</h3>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="searchbar2">
+          <input type="text" name="" id="" placeholder="Search" />
+          <div class="searchbtn">
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+              class="icn srchicn"
+              alt="search-button"
+            />
+          </div>
+        </div>
+
+        <!-- Welcome message -->
+        <div class="welcome-message" id="welcomeMessage" style="display: none">
+          Welcome, <span id="username"></span>!
+          <div class="tagline">Donate Today, Inspire Tomorrow.</div>
+        </div>
+
+        <!-- Donation Section -->
+        <div
+          class="donation-section"
+          id="donationSection"
+          style="display: none"
+        >
+          <h2>The Goal Achieved</h2>
+          <p>
+            Total Donations via Your Referral Code:
+            <span id="totalDonations">$0</span>
+          </p>
+          <p>Your Referral Code: <span id="referralCode">XYZ123</span></p>
+
+          <div class="btn-group">
+            <button class="btn copy-btn" id="copyLinkBtn">
+              Copy Donation Link
+            </button>
+            <button class="btn whatsapp-btn" id="shareWhatsAppBtn">
+              Share on WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Content of the main section can be added here -->
+        <div style="height: 2000px">
+          <!-- This div is for demonstration -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
+
+    <script src="./index.js"></script>
+    <script>
+      // Get the button
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // Show the button when scrolling down
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      // Scroll to top function
+      scrollToTopBtn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      // Handle login button click
+      const loginButton = document.getElementById("loginButton");
+      loginButton.onclick = function () {
+        const username = prompt("Please enter your name:");
+        if (username) {
+          document.getElementById("username").textContent = username;
+          document.getElementById("welcomeMessage").style.display = "block";
+          document.getElementById("donationSection").style.display = "block";
+        }
+      };
+
+      // Copy donation link functionality
+      const copyLinkBtn = document.getElementById("copyLinkBtn");
+      copyLinkBtn.onclick = function () {
+        const donationLink = "https://example.com/donate?ref=XYZ123";
+        navigator.clipboard.writeText(donationLink);
+        alert("Donation link copied to clipboard!");
+      };
+
+      // Share on WhatsApp functionality
+      const shareWhatsAppBtn = document.getElementById("shareWhatsAppBtn");
+      shareWhatsAppBtn.onclick = function () {
+        const referralCode = "XYZ123"; // Replace with the actual referral code
+        const donationLink = `https://5xwxc4-5000.csb.app/donation.html?ref=${referralCode}`; // Include the referral code in the URL
+        const message = `Hi, I am raising funds for NayePankh Foundation. Please support me by donating through this link ${donationLink} and make a difference!`;
+        const whatsappURL = `https://wa.me/?text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappURL, "_blank");
+      };
+    </script>
+  </body>
+</html>
