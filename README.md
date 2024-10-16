@@ -34,7 +34,7 @@
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone 
+   git clone https://github.com/kupaaa24/Fundconnects
 2. Navigate to the project directory:
    ```bash
    cd fundconnect
